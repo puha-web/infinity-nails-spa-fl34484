@@ -25,7 +25,9 @@ import contactsStyle from "assets/jss/material-kit-pro-react/views/sectionsSecti
 
 //Data
 import aboutData from '../../../db/AboutUs';
+import BusinessHrs from '../../../db/BusinessHrs';
 import elementStyle from '../../../db/ElementStyles';
+import Convenience from '../../../db/Convenience';
 
 class SectionContacts extends React.Component {
 
@@ -56,7 +58,7 @@ class SectionContacts extends React.Component {
                   <CardBody>
                     <GridContainer>
                       <GridItem xs={12} sm={12} md={12}>
-                        {aboutData.busHrs.map(busHr => (
+                        {BusinessHrs.map(busHr => (
                           <InfoArea
                           className={classes.infoArea2}
                           title={
@@ -72,21 +74,17 @@ class SectionContacts extends React.Component {
                         ))}
                         
                       </GridItem>
-                      <GridItem xs={12} sm={12} md={12}>
-                        <InfoArea
-                          className={classes.infoArea2}
-                          title={<h4>Walks-In Welcome</h4>}
-                          icon={WalkIn}
-                          iconColor={elementStyle.iconColor}
-                        />
-                      </GridItem>
-                      <GridItem xs={12} sm={12} md={12}>
-                        <InfoArea
-                          className={classes.infoArea2}
-                          title={<h4>We Accept Credit Cards</h4>}
-                          icon={CreditCard}
-                          iconColor={elementStyle.iconColor}
-                        />
+                        <GridItem xs={12} sm={12} md={12}>
+                        {Convenience.map(offer => (
+                          <InfoArea
+                            key={offer.title}
+                            className={classes.infoArea2}
+                            title={<h4>{offer.title}</h4>}
+                            description={offer.description}
+                            icon={offer.icon}
+                            iconColor={elementStyle.iconColor}
+                          />
+                          ))}
                       </GridItem>
                     </GridContainer>
                   </CardBody>

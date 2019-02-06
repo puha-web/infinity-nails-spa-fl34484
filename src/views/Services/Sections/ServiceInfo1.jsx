@@ -11,15 +11,14 @@ import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 
 import elementStyle from '../../../db/ElementStyles';
-import ServiceBgImg from 'assets/img/salon/serviceBg.jpg';
-
 
 const serviceList = (props) => (
 
-  <Card style={{ backgroundImage: `url(${ServiceBgImg})` }}>
+  <Card  style={{ backgroundImage: `url(${elementStyle.serviceBg})` }}
+  >
     <CardBody>
       <div>
-        <h3 style={{ fontWeight: 'bold' }}
+        <h3 style={{ fontWeight: 'bold', textAlign: 'center' }}
         >{props.groupName}</h3>
         {props.allServices.filter(groupedServices => groupedServices.category === props.groupName)
           .map(serviceInfo =>
@@ -45,7 +44,7 @@ const serviceList = (props) => (
         }
       </div>
     </CardBody>
-    <CardFooter>
+    {/* <CardFooter>
       <h5>
         The hearling herbal wrap is to help relive stress, aches, tendonitis, arthritis, scramps,
         muscle pain, and increase blood circulation. It is 100% all nature aromatherapy.
@@ -53,14 +52,9 @@ const serviceList = (props) => (
         bruises, and stings.
         <br />
         <br />
-
         If you require any extra services, please talk to our technician and confirm the price.
-
       </h5>
-
-
-
-    </CardFooter>
+    </CardFooter> */}
 
   </Card>
 

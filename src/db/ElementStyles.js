@@ -1,12 +1,13 @@
 
 
 const Elements = {
-  btnColor: 'success',
-  iconColor: 'success',
-  headerBackground: 'success',
-  serGroupColor: 'primary',
-  serviceName: '#9c27b0',
-  serviceBg: 'https://s3.amazonaws.com/lcn-nail-spa-nc27613/images/background/serviceBg.jpg'
+  btnColor: 'warning',
+  iconColor: 'warning',
+  headerBackground: 'default',
+  serGroupColor: 'warning',
+  serviceName: '#FF5733',
+  coverPhoto: 'https://s3.amazonaws.com/infinity-nails-spa-fl34484/images/background/cover-photo.jpg',
+  serviceBg: 'https://s3.amazonaws.com/infinity-nails-spa-fl34484/images/background/background1.jpg'
 }
 
 export default Elements;

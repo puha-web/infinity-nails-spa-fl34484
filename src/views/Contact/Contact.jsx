@@ -19,6 +19,8 @@ import PinDrop from "@material-ui/icons/PinDrop";
 import Phone from "@material-ui/icons/Phone";
 import WalkIn from "@material-ui/icons/TagFaces";
 import CreditCard from "@material-ui/icons/CreditCard";
+import Email from "@material-ui/icons/Email";
+
 
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
@@ -33,24 +35,25 @@ import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsSty
 
 //Components
 import SalonPhoto from './salonGallery.jsx';
-import ServiceBgImg from 'assets/img/salon/serviceBg.jpg';
+// import ServiceBgImg from 'assets/img/salon/serviceBg.jpg';
 import SocialMedia from "../Components/SocialMedia.jsx";
 
 //Data
 import aboutData from '../../db/AboutUs';
 import elementStyle from '../../db/ElementStyles';
+import Contact from '../../db/Contact';
 
 const CustomSkinMap = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
       defaultZoom={18}
-      defaultCenter={{ lat: 28.9085061, lng: -81.9717989 }}
+      defaultCenter={{ lat: 28.920170, lng: -82.037200 }}
       defaultOptions={{
         scrollwheel: false,
         zoomControl: true,
       }}
     >
-      <Marker position={{ lat: 28.9085061, lng: -81.9717989 }} label={aboutData.salonName} />
+      <Marker position={{ lat: 28.920170, lng: -82.037200 }} label={aboutData.salonName} />
 
     </GoogleMap>
   ))
@@ -64,9 +67,6 @@ class Location extends React.Component {
   render() {
 
     const { classes } = this.props;
-    const phoneNum = 'tel:' + aboutData.phone;
-
-
     return (
       <div>
         {/* <Header /> */}
@@ -93,7 +93,7 @@ class Location extends React.Component {
               {/* <h2 className={classes.title}>Our Location</h2> */}
               <GridContainer>
                 <GridItem md={5} sm={5} className={classes}>
-                  <Card style={{ backgroundImage: `url(${ServiceBgImg})` }}>
+                  <Card style={{ backgroundImage: `url(${elementStyle.serviceBg})` }}>
                     <CardHeader
                       contact
                       color={elementStyle.btnColor}
@@ -104,59 +104,27 @@ class Location extends React.Component {
                     <CardBody>
                       <GridContainer>
                         <GridItem>
-                          <InfoArea
+                          {Contact.map(contactInfo => (
+                            <InfoArea
                             className={classes.info}
-                            title={
-                              <div>
-                                <span>
-                                  {aboutData.address.street},
-                                  <br /> {aboutData.address.city}, {aboutData.address.state}. {aboutData.address.zipCode}
-                                </span>
-                              </div>
-                            }
+                            title={contactInfo.description}
                             description={
                               <Button
                                 round
-                                color={elementStyle.btnColor}
+                                color='default'
                                 size="sm"
-                                href={aboutData.addressLink}
+                                href={contactInfo.link}
                                 target="_blank"
-                                rel={aboutData.addressLink}
-                              >
-                                Get Directions
-                                  </Button>
-                            }
-                            icon={PinDrop}
-                            iconColor={elementStyle.iconColor}
-                          />
-                          <InfoArea
-                            className={classes.info}
-                            title={aboutData.phone}
-                            description={
-                              <Button
-                                round
-                                color={elementStyle.btnColor}
-                                size="sm"
-                                href={phoneNum}
                                 rel="noopener noreferrer"
                               >
-                                Call Now</Button>
+                                {contactInfo.CallOut}
+                                  </Button>
                             }
-                            icon={Phone}
+                            icon={contactInfo.icon}
                             iconColor={elementStyle.iconColor}
                           />
-                          <InfoArea
-                            className={classes.info}
-                            title="Walks-In Welcome"
-                            icon={WalkIn}
-                            iconColor={elementStyle.iconColor}
-                          />
-                          <InfoArea
-                            className={classes.info}
-                            title="We Accept Credit Cards"
-                            icon={CreditCard}
-                            iconColor={elementStyle.iconColor}
-                          />
+                          ))}
+                          
                         </GridItem>
                       </GridContainer>
                     </CardBody>

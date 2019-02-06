@@ -24,14 +24,13 @@ class Services extends React.Component {
 
   state = {
     services: [],
-    groups: ["Manicure", "Pedicures", "Combo Specials", "Waxing", "Kids' Services",]
   }
 
   componentDidMount() {
-    this.setState( { services: services })
+    this.setState({ services: services })
   }
 
-   render() {
+  render() {
     const { classes } = this.props;
 
     return (
@@ -43,35 +42,64 @@ class Services extends React.Component {
           }}>
           <GridItem xs={12} sm={12} md={12} className={classes.textCenter} style={{ margin: '0', padding: '0' }}>
             <h2 style={{ fontWeight: 'bold' }}>Our Services</h2>
+            <div>
+              <NavPills  style={{ backgroundImage: `url(${styles.serviceBg})` }}
+                horizontal={{
+                  tabsGrid: { xs: 12, sm: 3, md: 2 },
+                  contentGrid: { xs: 12, sm: 9, md: 10 }
 
-            <NavPills
-              color={styles.serGroupColor}
-              alignCenter
-              tabs={[
-                {
-                  tabButton: "Manicures",
-                  tabContent: <ServiceInfo allServices={this.state.services} groupName='Manicures'/>
-                },
-                {
-                  tabButton: "Pedicures",
-                  tabContent: <ServiceInfo allServices={this.state.services} groupName='Pedicures'/>
-                },
-                {
-                  tabButton: "Combo Specials",
-                  tabContent: <ServiceInfo allServices={this.state.services} groupName='Combo Specials'/>
-                },
-                {
-                  tabButton: "Waxing",
-                  tabContent: <ServiceInfo allServices={this.state.services} groupName='Waxing'/>
-                },
-                {
-                  tabButton: "Kids' Services",
-                  tabContent: <ServiceInfo allServices={this.state.services} groupName="Kids' Services"/>
-                },
-              ]}
-            />
-            <div className={classes.tabSpace} />
-            
+                }}
+                color={styles.serGroupColor}
+                // alignCenter
+                tabs={[
+                  {
+                    tabButton: "Organic Manicures",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName='Organic Manicures' />
+                  },
+                  {
+                    tabButton: "Organic Pedicures",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName='Organic Pedicures' />
+                  },
+                  {
+                    tabButton: "Nails Extension",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName='Nails Extension' />
+                  },
+                  {
+                    tabButton: "SNS & OPI Dipping",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName='SNS & OPI Dipping' />
+                  },
+                  {
+                    tabButton: "Gel",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName="Gel" />
+                  },
+                  {
+                    tabButton: "Gel Polish",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName="Gel Polish" />
+                  },
+                  {
+                    tabButton: "Kiddy Services",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName="Kiddy Services" />
+                  },
+                  {
+                    tabButton: "Additional Add On",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName="Additional Add On" />
+                  },
+                  {
+                    tabButton: "Waxing",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName="Waxing" />
+                  },
+                  {
+                    tabButton: "Facial",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName="Facial" />
+                  },
+                  {
+                    tabButton: "Eyelash Extension",
+                    tabContent: <ServiceInfo allServices={this.state.services} groupName="Eyelash Extension" />
+                  },
+                ]}
+              />
+              <div className={classes.tabSpace} />
+            </div>
           </GridItem>
         </GridContainer>
       </div>

@@ -22,35 +22,34 @@ class Media extends React.Component {
       <div className={classes.section}>
         <GridContainer justify="center" >
           <GridItem xs={12} sm={8} md={8} style={{ marginBottom: '50px' }} >
-            <h4 className={classes.title}>Follow Us</h4>
-            <Button round color="google" style={{ width: '150px'}}
-              href={SocialLinks.google} 
+            <h4 className={classes.title}>Thank You For Visting Us</h4>
+            <Button round color="google" style={{ width: '150px' }}
+              href={SocialLinks.google}
               target="_blank"
             >
               <i
                 className={"fab fa-google"}
-              />{" "}
-              Google
+              />
+              Google Us
             </Button>
-            <Button round color="facebook" style={{ width: '150px'}}
+            <Button round color="facebook" style={{ width: '150px' }}
               href={SocialLinks.facebook}
               target="_blank"
             >
               <i
                 className={"fab fa-facebook"}
-              />{" "}
-              Facebook
+              />
+               Follow Us
             </Button>
-            <Button round style={{backgroundColor: '#FCF3CF', color: 'black', width: '150px'}}
+            <Button round style={{ backgroundColor: '#FCF3CF', color: 'black', width: '150px' }}
               href={SocialLinks.yelp}
               target="_blank"
             >
               <i
-                className={"fab fa-yelp"} style={{color: 'red'}}
-              />{" "}
-              yelp
+                className={"fab fa-yelp"} style={{ color: 'red' }}
+              />
+               Review Us
             </Button>
-            <h4 className={classes.title}>Thank You For Visting Us! </h4>
 
           </GridItem>
         </GridContainer>

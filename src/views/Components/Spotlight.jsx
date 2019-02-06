@@ -24,7 +24,7 @@ class Spotlight extends React.Component {
     console.log(phoneNum)
 
     return (
-      <Parallax image={aboutData.coverPhoto} filter="dark" small>
+      <Parallax image={elementStyle.coverPhoto} filter="dark" small>
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem

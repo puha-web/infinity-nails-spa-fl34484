@@ -12,6 +12,7 @@ import CardHeader from "components/Card/CardHeader.jsx";
 
 //Data
 import aboutData from '../../../db/AboutUs';
+import MainServices from '../../../db/WeOffer';
 
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.jsx";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.jsx";
@@ -26,11 +27,7 @@ const style = {
 
 class WeOffer extends React.Component {
   state = {
-    services: []
-  }
-
-  componentDidMount() {
-    this.setState( { services: aboutData.weOffer })
+    services: MainServices
   }
 
   render() {
