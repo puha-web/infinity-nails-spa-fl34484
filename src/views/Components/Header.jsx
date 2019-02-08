@@ -7,6 +7,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // core components
 import Header from "components/Header/Header.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
+import Warning from "components/Typography/Warning.jsx";
+
 
 import landingPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.jsx";
 
@@ -17,24 +19,26 @@ import Style from '../../db/ElementStyles.js';
 
 class PageHeader extends React.Component {
   render() {
-    const { classes, ...rest} = this.props;
+    const { classes, ...rest } = this.props;
 
-    return(
+    return (
       <Header
-      color="transparent"
-      brand={
-        <h4
-          style={{ fontFamily: "'Coiny', cursive", fontSize: '25px', padding: 0, margin: 0 }}
-        >{aboutUs.salonName}</h4>
-      }
-      links={<HeaderLinks dropdownHoverColor="info" />}
-      fixed
-      changeColorOnScroll={{
-        height: 1,
-        color: Style.headerBackground
-      }}
-      {...rest}
-    />
+        color="transparent"
+        brand={
+          <Warning>
+            <h4
+              style={Style.brandName}
+            >{aboutUs.salonName}</h4>
+          </Warning>
+        }
+        links={<HeaderLinks dropdownHoverColor="info" />}
+        fixed
+        changeColorOnScroll={{
+          height: 1,
+          color: Style.headerBackground
+        }}
+        {...rest}
+      />
     )
   }
 }
