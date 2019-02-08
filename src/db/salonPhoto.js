@@ -3,20 +3,9 @@
 const gallery = [
   {
     id: 9,
-    image: 'https://s3.amazonaws.com/signature-nails-fl32162/images/gallery/salonPhoto/salon1.jpg'
+    image: 'https://s3.amazonaws.com/infinity-nails-spa-fl34484/images/gallery/salonPhoto/IMG_0733.JPEG'
   },
-  {
-    id: 8,
-    image: 'https://s3.amazonaws.com/signature-nails-fl32162/images/gallery/salonPhoto/salon2.JPEG'
-  },
-  {
-    id: 7,
-    image: 'https://s3.amazonaws.com/signature-nails-fl32162/images/gallery/salonPhoto/salon3.jpg'
-  },
-  {
-    id: 6,
-    image: 'https://s3.amazonaws.com/signature-nails-fl32162/images/gallery/salonPhoto/salon4.jpg'
-  },
+
   
 ]
 

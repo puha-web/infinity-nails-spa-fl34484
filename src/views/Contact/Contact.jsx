@@ -46,7 +46,7 @@ import Contact from '../../db/Contact';
 const CustomSkinMap = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
-      defaultZoom={18}
+      defaultZoom={16}
       defaultCenter={{ lat: 28.920170, lng: -82.037200 }}
       defaultOptions={{
         scrollwheel: false,
