@@ -9,9 +9,9 @@ const Elements = {
     margin: 0,
   },
   headerBackground: 'white',
-  btnColor: 'warning',
-  iconColor: 'warning',
-  serGroupColor: 'warning',
+  btnColor: 'danger',
+  iconColor: 'danger',
+  serGroupColor: 'danger',
   serviceName: '#FF5733',
   coverPhoto: 'https://s3.amazonaws.com/infinity-nails-spa-fl34484/images/background/cover-photo1.jpg',
   serviceBg: 'https://s3.amazonaws.com/infinity-nails-spa-fl34484/images/background/background1.jpg'

@@ -22,7 +22,6 @@ class Gallery extends React.Component {
     window.scrollTo(0, 300);
     // document.body.scrollTop = 0;
 
-    // document.getElementById('gallery-div').scrollIntoView({ behavior: 'auto'})
 
   }
   render() {
@@ -30,7 +29,7 @@ class Gallery extends React.Component {
     return (
       <div>
         <Spotlight />
-        <div className={classNames(classes.main, classes.mainRaised)} id='gallery-div'>
+        <div className={classNames(classes.main, classes.mainRaised)} >
           <div className={classes.container}>
             <Specials />
             <SocialMedia />
